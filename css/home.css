@@ -1,0 +1,51 @@
+.homeSection {
+  display: flex;
+}
+
+.homeCenter {
+  display: flex;
+  position: absolute;
+  top: 30%;
+  left: 33%;
+  width: 100%;
+}
+.slider {
+  width: 100%;
+}
+
+.slider:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.slider li {
+  opacity: 0;
+}
+.typing-txt {
+  display: none;
+}
+
+.typing {
+  display: inline-block;
+  animation-name: cursor;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  height: 50px;
+  font-size: 55px;
+  color: beige;
+  position: absolute;
+  top: 12%;
+  left: 30%;
+}
+
+@keyframes cursor {
+  0% {
+    border-right: 3px solid #fff;
+  }
+  50% {
+    border-right: 3px solid #000;
+  }
+  100% {
+    border-right: 3px solid #fff;
+  }
+}

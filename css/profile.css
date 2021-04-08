@@ -1,0 +1,218 @@
+/* start of second page */
+
+:root {
+  --ease: cubic-bezier(0.29, 0.57, 0.12, 0.99);
+  --duration: 0.6s;
+  --size: 580px;
+  --scaleMask: 0.69;
+  --scaleBtn: 0.69;
+}
+@media (max-width: 900px) {
+  :root {
+    --size: 400px;
+    --scaleMask: 0.45;
+    --scaleBtn: 0.45;
+  }
+}
+@media (max-width: 700px) {
+  :root {
+    --size: 300px;
+    --scaleMask: 0.35;
+    --scaleBtn: 0.35;
+  }
+}
+@media (max-width: 500px) {
+  :root {
+    --size: 20px;
+    --scaleMask: 0.29;
+    --scaleBtn: 0.35;
+  }
+}
+
+.profile {
+  background: #f5d8d5;
+  color: #84b7b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.prf {
+  position: relative;
+  z-index: 1;
+  width: var(--size);
+  height: var(--size);
+}
+.prfBtn {
+  position: absolute;
+  top: 60%;
+  z-index: 10;
+  bottom: calc(10% * var(--scaleBtn));
+  /* left: calc(10% * var(s--scaleBtn)); */
+  -webkit-transform: rotate(-20deg) scale(var(--scaleBtn));
+  transform: rotate(-20deg) scale(var(--scaleBtn));
+  -webkit-transition: -webkit-transform 0.2s var(--ease);
+  transition: -webkit-transform 0.2s var(--ease);
+  transition: transform 0.2s var(--ease);
+  transition: transform 0.2s var(--ease), -webkit-transform 0.2s var(--ease);
+  width: 120px;
+  height: 120px;
+  background: #7ec96a;
+  box-shadow: 0 10px 20px -6px #7ec96a;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 30px;
+}
+.prfBtn:before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition: -webkit-transform 0.4s var(--ease);
+  transition: -webkit-transform 0.4s var(--ease);
+  transition: transform 0.4s var(--ease);
+  transition: transform 0.4s var(--ease), -webkit-transform 0.4s var(--ease);
+}
+.prfBtn:hover:before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.prfBtn:active {
+  /* -webkit-transform: scale(calc(var(--scaleBtn) * 0.9)) rotate(-5deg);
+  transform: scale(calc(var(--scaleBtn) * 0.9)) rotate(-5deg); */
+}
+.prf svg {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: #e8f5e4;
+  pointer-events: none;
+}
+.prf svg #mask {
+  -webkit-transform: scale(var(--scaleMask));
+  transform: scale(var(--scaleMask));
+}
+.prfImg {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: url(#mask);
+  overflow: hidden;
+  display: flex;
+}
+
+.prfImg img {
+  position: absolute;
+  display: flex;
+  z-index: 2;
+  top: 8.5%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-transition: opacity var(--duration) var(--ease),
+    -webkit-transform var(--duration) var(--ease);
+  transition: opacity var(--duration) var(--ease),
+    -webkit-transform var(--duration) var(--ease);
+  transition: opacity var(--duration) var(--ease),
+    transform var(--duration) var(--ease);
+  transition: opacity var(--duration) var(--ease),
+    transform var(--duration) var(--ease),
+    -webkit-transform var(--duration) var(--ease);
+  opacity: 0;
+  -webkit-transform: scale(0.9) translateZ(0);
+  transform: scale(0.9) translateZ(0);
+}
+.prfImg img.active {
+  -webkit-transform: scale(1) translateZ(0);
+  transform: scale(1) translateZ(0);
+  opacity: 1;
+}
+
+.prfImg img {
+  position: absolute;
+  display: flex;
+  z-index: 2;
+  top: 8.5%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-transition: opacity var(--duration) var(--ease),
+    -webkit-transform var(--duration) var(--ease);
+  transition: opacity var(--duration) var(--ease),
+    -webkit-transform var(--duration) var(--ease);
+  transition: opacity var(--duration) var(--ease),
+    transform var(--duration) var(--ease);
+  transition: opacity var(--duration) var(--ease),
+    transform var(--duration) var(--ease),
+    -webkit-transform var(--duration) var(--ease);
+  opacity: 0;
+  -webkit-transform: scale(0.9) translateZ(0);
+  transform: scale(0.9) translateZ(0);
+}
+/* start of second page txt */
+.prf-txt {
+  display: block;
+  border: 2px solid aqua;
+  background-color: white;
+  margin-top: 5%;
+}
+.heading {
+  font-family: "Playfair Display", serif;
+}
+
+.subheading {
+  font-family: "Jua", sans-serif;
+  font-size: 1.8em;
+  line-height: 1.8;
+}
+
+@media screen and (min-width: 40em) {
+  .heading {
+    font-size: 6vw;
+  }
+
+  .subheading {
+    font-size: 1.75vw;
+  }
+}
+/*================================================
+Start Important Part
+==================================================*/
+.underline--magical {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+}
+.underline--magical:hover {
+  background-size: 100% 88%;
+}
+
+/*================================================
+End Important Part
+==================================================*/

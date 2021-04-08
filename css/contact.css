@@ -1,0 +1,292 @@
+div .sns {
+  display: flex;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+.hexagon-wrapper {
+  margin: auto;
+  display: flex;
+  text-align: initial;
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.hexagon {
+  position: relative;
+  width: 46%;
+  height: 80%;
+  margin: auto;
+  color: white;
+  background: linear-gradient(-180deg, white, #fda3b2);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.hexagon i {
+  z-index: 1;
+  margin: auto;
+  font-size: 50px;
+  color: transparent;
+  background: linear-gradient(45deg, #a58fe9, #e37682);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.hexagon a {
+  z-index: 1;
+  margin: auto;
+  font-size: 50px;
+  color: transparent;
+  background: linear-gradient(45deg, #a58fe9, #e37682);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.hexagon:before,
+.hexagon:after {
+  position: absolute;
+  content: "";
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  transition: 0.5s;
+  transform-origin: center;
+}
+.hexagon:before {
+  transform: rotateZ(60deg);
+}
+.hexagon:after {
+  transform: rotateZ(-60deg);
+}
+.hexagon:hover {
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.hexagon:hover:before {
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.hexagon:hover:after {
+  border-radius: 50px;
+  transition: 0.5s;
+}
+/* end of .sns */
+
+/* start of txt */
+
+footer {
+  align-items: center;
+  background-color: #263238;
+  background-image: url('data:image/svg+xml,%3Csvg width="42" height="44" viewBox="0 0 42 44" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg id="brick-wall" fill="%2337474F" fill-opacity="0.5"%3E%3Cpath d="M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+  display: flex;
+  font-family: "Vibur", cursive;
+  font-size: 100px;
+  height: 100%;
+  justify-content: center;
+  line-height: 1;
+  text-align: center;
+}
+.sign {
+  font-family: "Vibur", cursive;
+  font-size: 100px;
+}
+text {
+  border: 2px solid red;
+}
+.thanx {
+  font-family: "vibur", cursive;
+  font-size: 90px;
+}
+
+.happy {
+  -webkit-animation: 1s glow linear alternate infinite;
+  animation: 1s glow linear alternate infinite;
+  fill: #fee;
+  -webkit-filter: drop-shadow(0 0 0.015625em #fee)
+    drop-shadow(0 0 0.03125em #fcc) drop-shadow(0 0 0.0625em #f99)
+    drop-shadow(0 0 0.25em #f66);
+  filter: drop-shadow(0 0 0.015625em #fee) drop-shadow(0 0 0.03125em #fcc)
+    drop-shadow(0 0 0.0625em #f99) drop-shadow(0 0 0.25em #f66);
+  font-family: "Sacramento", cursive;
+  font-size: 150px;
+  letter-spacing: -0.025em;
+  width: 50vmin;
+}
+
+.sign {
+  position: relative;
+  margin-top: -0.5em;
+}
+
+.stars {
+  -webkit-animation: 2s flash linear infinite;
+  animation: 2s flash linear infinite;
+  position: relative;
+  top: -1.45em;
+}
+.stars span {
+  position: absolute;
+}
+.stars span:first-child {
+  color: #ffe;
+  right: 0.15em;
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+  -webkit-filter: drop-shadow(0 0 0.03125em #ffc) drop-shadow(0 0 0.0625em #ff9)
+    drop-shadow(0 0 0.25em #ff3);
+  filter: drop-shadow(0 0 0.03125em #ffc) drop-shadow(0 0 0.0625em #ff9)
+    drop-shadow(0 0 0.25em #ff3);
+}
+.stars span:last-child {
+  color: #fef;
+  left: 0.15em;
+  -webkit-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  -webkit-filter: drop-shadow(0 0 0.03125em #fcf) drop-shadow(0 0 0.0625em #f9f)
+    drop-shadow(0 0 0.25em #f3f);
+  filter: drop-shadow(0 0 0.03125em #fcf) drop-shadow(0 0 0.0625em #f9f)
+    drop-shadow(0 0 0.25em #f3f);
+}
+
+.stars_ {
+  font-size: 150px;
+  fill: #ffe;
+  letter-spacing: -0.3em;
+  position: absolute;
+  top: -2%;
+  left: -10%;
+  width: 120%;
+}
+.stars_ tspan {
+  -webkit-filter: drop-shadow(0 0 0.03125em #ffc) drop-shadow(0 0 0.0625em #ff9)
+    drop-shadow(0 0 0.25em #ff3);
+  filter: drop-shadow(0 0 0.03125em #ffc) drop-shadow(0 0 0.0625em #ff9)
+    drop-shadow(0 0 0.25em #ff3);
+  text-shadow: 0 0 0.03125em #ff9, 0 0 0.25em #ff6, 0 0 0.5em #ff3;
+}
+.stars_ tspan:nth-last-child(2) {
+  font-size: 0.67em;
+  fill: #fef;
+}
+.stars_ tspan:nth-last-child(3) {
+  font-size: 0.33em;
+}
+
+.year {
+  letter-spacing: -0.025em;
+  margin-top: -0.25em;
+  font-family: "Jua";
+}
+.year span:nth-child(2n + 1) {
+  -webkit-animation: 100ms flicker 50ms infinite alternate;
+  animation: 100ms flicker 50ms infinite alternate;
+  color: #eff;
+  -webkit-filter: drop-shadow(0 0 0.03125em #cff) drop-shadow(0 0 0.0625em #9ff)
+    drop-shadow(0 0 0.25em #6ff);
+  filter: drop-shadow(0 0 0.03125em #cff) drop-shadow(0 0 0.0625em #9ff)
+    drop-shadow(0 0 0.25em #6ff);
+}
+.year span:nth-child(2n) {
+  -webkit-animation: flicker 100ms infinite alternate;
+  animation: flicker 100ms infinite alternate;
+  color: #efe;
+  position: relative;
+  top: 0.15em;
+  -webkit-filter: drop-shadow(0 0 0.03125em #cfc) drop-shadow(0 0 0.0625em #9f9)
+    drop-shadow(0 0 0.25em #6f6);
+  filter: drop-shadow(0 0 0.03125em #cfc) drop-shadow(0 0 0.0625em #9f9)
+    drop-shadow(0 0 0.25em #6f6);
+}
+
+@-webkit-keyframes flash {
+  from {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  49.99% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+  }
+  50% {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+  to {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+}
+
+@keyframes flash {
+  from {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  49.99% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+  }
+  50% {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+  to {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+}
+@-webkit-keyframes flicker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+@-webkit-keyframes glow {
+  from {
+    -webkit-filter: drop-shadow(0 0 0.015625em #fee)
+      drop-shadow(0 0 0.03125em #fcc) drop-shadow(0 0 0.0625em #f99)
+      drop-shadow(0 0 0.25em #f66);
+    filter: drop-shadow(0 0 0.015625em #fee) drop-shadow(0 0 0.03125em #fcc)
+      drop-shadow(0 0 0.0625em #f99) drop-shadow(0 0 0.25em #f66);
+  }
+  to {
+    -webkit-filter: drop-shadow(0 0 0.015625em #fee)
+      drop-shadow(0 0 0.03125em #fcc) drop-shadow(0 0 0.0625em #f99)
+      drop-shadow(0 0 0.25em #f66) drop-shadow(0 0 0.5em #f33);
+    filter: drop-shadow(0 0 0.015625em #fee) drop-shadow(0 0 0.03125em #fcc)
+      drop-shadow(0 0 0.0625em #f99) drop-shadow(0 0 0.25em #f66)
+      drop-shadow(0 0 0.5em #f33);
+  }
+}
+@keyframes glow {
+  from {
+    -webkit-filter: drop-shadow(0 0 0.015625em #fee)
+      drop-shadow(0 0 0.03125em #fcc) drop-shadow(0 0 0.0625em #f99)
+      drop-shadow(0 0 0.25em #f66);
+    filter: drop-shadow(0 0 0.015625em #fee) drop-shadow(0 0 0.03125em #fcc)
+      drop-shadow(0 0 0.0625em #f99) drop-shadow(0 0 0.25em #f66);
+  }
+  to {
+    -webkit-filter: drop-shadow(0 0 0.015625em #fee)
+      drop-shadow(0 0 0.03125em #fcc) drop-shadow(0 0 0.0625em #f99)
+      drop-shadow(0 0 0.25em #f66) drop-shadow(0 0 0.5em #f33);
+    filter: drop-shadow(0 0 0.015625em #fee) drop-shadow(0 0 0.03125em #fcc)
+      drop-shadow(0 0 0.0625em #f99) drop-shadow(0 0 0.25em #f66)
+      drop-shadow(0 0 0.5em #f33);
+  }
+}
