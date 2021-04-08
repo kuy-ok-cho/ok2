@@ -7,7 +7,7 @@
     <title>ok2</title>
     
 
-
+<!-- 폴더변경 -->
 
     <!-- css -->
     <link rel="stylesheet" href="jquery.fullPage.css">
